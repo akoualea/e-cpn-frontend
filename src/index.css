@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+
+  --color-medecin: #059669;
+  --color-patiente: #FF7096;
+  --color-dark-bg: #181a1e;
+  --color-dark-card: #202528;
+}
+
+
+/* Styles personnalisés pour le flux hospitalier */
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-white/20 shadow-xl rounded-2xl;
+  }
+  
+  .status-badge {
+    @apply px-3 py-1 rounded-full text-[10px] font-black uppercase tracking-tighter;
+  }
+  
+  .btn-medecin {
+    @apply bg-[var(--color-medecin)] text-white hover:opacity-90 transition-all shadow-lg shadow-emerald-500/20;
+  }
+
+
+
+  html {
+ 
+  font-size: 14px; 
+}
+
+@media (min-width: 1536px) {
+  html {
+    font-size:14px; /* On remet la taille normale uniquement sur les très grands écrans */
+  }
+}
+    @layer base {
+  body {
+    /* Pour Chrome, Edge et Safari */
+    zoom: 0.99; 
+    
+    /* Pour Firefox (qui ne supporte pas zoom) */
+    -moz-transform: scale(0.75);
+    -moz-transform-origin: 0 0;
+  }
+}
+
+:root {
+  /* Au lieu de 16px par défaut, on descend à 12px. 
+     Toutes tes classes (p-10, text-xl, w-64) vont rétrécir 
+     automatiquement de 25% sans casser le design ! */
+  font-size: 6px;
+}
+
+body {
+  background-color: #F8F9FA;
+  /* On s'assure que le body prend bien toute la place */
+  min-height: 50vh;
+  width: 100%;
+}
+
+}
