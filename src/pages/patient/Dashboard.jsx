@@ -177,7 +177,7 @@ const fetchDashboardData = useCallback(async () => {
 
   // Filtrage dynamique de la navigation
   const navigationItems = [
-    { id: 'dashboard', icon: <LayoutDashboard size={34} />, label: 'Tableau de bord', menuLabel: 'Tableau de bord' },
+    { id: 'dashboard', icon: <LayoutDashboard size={34} />, label: 'Tableau de bord', menuLabel: 'Dashboard' },
     { id: 'journal', icon: <BookOpen size={34} />, label: 'Journal de grossesse', menuLabel: 'Journal' },
     { id: 'plan', icon: <ClipboardList size={34} />, label: 'Plan de naissance', menuLabel: 'Plan' },
     { id: 'rendezvous', icon: <Calendar size={34} />, label: 'Rendez-vous', menuLabel: 'Rendez-vous' },
@@ -246,7 +246,7 @@ const fetchDashboardData = useCallback(async () => {
                     }`}
                 >
                   <span className="shrink-0">{item.icon}</span>
-                  <span className="text-[22px] leading-none font-black whitespace-nowrap">{item.menuLabel}</span>
+                  <span className="text-[18px] leading-none font-black whitespace-nowrap">{item.menuLabel}</span>
                 </button>
               ))}
             </nav>
