@@ -12,7 +12,7 @@ import logo from '../../assets/logo.png';
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'http://127.0.0.1:8000/api',
+  baseURL: 'https://e-cpn-backend-production.up.railway.app/',
   headers: {
     'Accept': 'application/json',
     'Content-Type': 'application/json'
